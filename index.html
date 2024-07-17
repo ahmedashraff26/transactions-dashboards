@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    
+    <header class="header">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid bg-dark-subtle">
+                <div class="p-2"><img class="logo" src="images/logo.png" alt=""></div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav ps-3">
+                        <a class="nav-link active" id="homeBtn" aria-current="page" href="#">Home</a>
+                        <a class="nav-link" id="transactionsBtn" aria-current="page" href="#">Transactions</a>
+                        <a class="nav-link" id="graphBtn" aria-current="page" href="#">Graph</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section id="home" class="vh-100">
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Welcome to Your Transactions Dashboard</h1>
+                <p>Track and manage your financial transactions easily.</p>
+                <div class="cta-buttons mt-4">
+                    <div id="viewTransactionsBtn" class="btn btn-dark">View Transactions Table</div>
+                    <div id="viewGrapgBtn" class="btn btn-dark">View Transactions Graph</div>
+                </div>
+            </div>
+        </section>
+    
+        <section class="features">
+            <h2>Key Features</h2>
+            <ul>
+                <li>Real-time updates</li>
+                <li>Interactive graphs</li>
+                <li>Exportable data</li>
+            </ul>
+        </section>
+    </section>
+
+    <section class="py-5 d-block d-none" id="transactions">
+        <div class="container">
+            <h2 class="pb-5 text-center">Transaction History</h2>
+            <div class="filters">
+                <div class="d-flex gap-2 py-3">
+                    <label class="me-4" for="dateRange">Filter By Name :</label>
+                    <input id="nameInput" class="form-control w-50" type="text" placeholder="Enter the name">
+                    <button id="nameFilterBtn" class="btn btn-dark ms-3">Filter by name</button>
+                </div>
+                <div id="nameAlert" class="alert alert-danger d-none w-75">Please enter a name</div>
+
+                <div class="d-flex gap-2 py-3">
+                    <label for="amountRange">Filter By Amount :</label>
+                    <input id="minAmount" class="form-control w-25" type="number" placeholder="Enter minimum">
+                    <input id="maxAmount" class="form-control w-25" type="number" placeholder="Enter Maximum">
+                    <button id="amountFilterBtn" class="btn btn-dark ms-1">Filter by amount</button>
+                </div>
+                <div id="amountAlert" class="alert alert-danger d-none w-75">Please enter a number</div>
+
+            </div>
+            <table class="transaction-table">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Name</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <tr>
+                        <td>2024-07-15</td>
+                        <td>Payment from Client A</td>
+                        <td class="amount income">+$500.00</td>
+                    </tr>
+                    <tr>
+                        <td>2024-07-16</td>
+                        <td>Office Supplies Purchase</td>
+                        <td class="amount expense">-$150.00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class="py-5 d-none" id="transaction-graph">
+        <h2 class="text-center pb-5">Transaction Trends</h2>
+        <div class="container pb-5 d-flex gap-3">
+            <label for="customerDropdown" class="pt-1 ps-2">Select Customer:</label>
+            <select id="customerDropdown" class="form-select w-50">
+
+            </select>
+        </div>
+        <div class="container">
+            <canvas id="transactionsChart"></canvas>
+        </div>
+    </section>
+
+    <footer class="site-footer bg-dark text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-12">
+                    <h5>Contact Us</h5>
+                    <p>Email: ahmedmorsy1a@gmail.com</p>
+                    <p>Phone: +1288169400</p>
+                    <p>Address: Rehab City, Cairo, Egypt</p>
+                </div>
+                <div class="col-md-4 col-sm-12">
+                    <h5>Follow Us</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="https://www.facebook.com/ahmed.morsy.3998" target="_blank">Facebook</a></li>
+                        <li><a href="https://x.com/AhmedAs26871366" target="_blank">Twitter</a></li>
+                        <li><a href="https://www.instagram.com/ahmeddashhraff/" target="_blank">Instagram</a></li>
+                        <li><a href="https://www.linkedin.com/in/ahmed-morsy-5a2688277/" target="_blank">LinkedIn</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 col-sm-12">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p>&copy; 2024 Your Company. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="back-to-top">Back to Top</a>
+    </footer>
+
+
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

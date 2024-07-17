@@ -1,0 +1,155 @@
+
+.logo{
+    width: 50px;
+    height: 50px;
+}
+
+.hero {
+    text-align: center;
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.features {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.features h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+.features ul {
+    list-style-type: none;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+.features ul li {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+/* Transactions Section Styles */
+.transactions {
+    background-color: #fff;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.transactions h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.filters {
+    margin-bottom: 20px;
+}
+
+.filters label {
+    margin-right: 10px;
+}
+
+.transaction-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.transaction-table th, .transaction-table td {
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.transaction-table .amount {
+    font-weight: bold;
+}
+
+.transaction-table .income {
+    color: green;
+}
+
+.transaction-table .expense {
+    color: red;
+}
+
+/* Transaction Graph Styles */
+.transaction-graph {
+    background-color: #fff;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.transaction-graph h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.site-footer {
+    padding: 50px 0;
+    color: #fff;
+}
+
+.site-footer h5 {
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.site-footer p {
+    color: #ccc;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.site-footer ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.site-footer ul li {
+    margin-bottom: 10px;
+}
+
+.site-footer ul li a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.site-footer ul li a:hover {
+    color: #fff;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: none;
+}
+
+.back-to-top:hover {
+    background-color: #0056b3;
+}
